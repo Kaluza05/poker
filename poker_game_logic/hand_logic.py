@@ -52,12 +52,10 @@ def straight(hand:list):#6
     if len(set(ranks))>=5:
         for i in set(ranks):
             st = [i+k for k in range(5)]
-            if set(st).issubset(set(ranks)):return cups_form(hand)[ranks.index(st[4])][0][0]
-            #if set.intersection(set(st),set(ranks))==set(st):
-            #    return cups_form(hand)[ranks.index(st[4])][0][0]
+            if set(st).issubset(set(ranks)):return [cups_form(hand)[ranks.index(st[4])][0][0]]
     return False
 
-#one more card
+
 def three_of_a_kind(hand:list):#7
     three = [i for i in cups_form(hand) if len(i)==3]
     if three:
@@ -73,7 +71,7 @@ def two_pair(hand:list):#8
         return [two[0][0][0],two[1][0][0] , hand_without_two[0]]
     return False
 
-#2 more cards 
+
 def one_pair(hand:list):#9
     one = [i for i in cups_form(hand) if len(i)==2]
     if one:

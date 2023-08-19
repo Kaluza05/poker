@@ -106,6 +106,7 @@ def can_call(previous_action)->bool:
 def game():
     shuffle(DECK)
     table = Table(num_of_players=N,starting_money=STARTING_MONEY)
+    print(table.determine_winner())
     while True:
         table.bet(0,SB)
         table.bet(1,BB)
