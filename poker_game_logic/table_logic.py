@@ -4,6 +4,7 @@ from numpy import roll
 from CONSTANTS import *
 from hand_logic import Hand
 
+
 class Table():
     def __init__(self,num_of_players,starting_money) -> None:
         self.num_of_players = num_of_players
